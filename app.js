@@ -4,8 +4,23 @@ class Game {
     this.categoryIds = []//grab ids from api*/
     this.catagory = []
     this.clues = {}
+
     this.currentClue = null
-    this.score = 0000
+    this.score = 0
+
+    this.gameBoard = html.querySelector('.gameBoard');
+    this.scoreCount = html.querySelector('.count')
+    this.form = html.querySelector('form')
+    this.input = html.querySelector('input[name=answer]')
+    this.modal = html.querySelector('.modal')
+    this.questionText = html.querySelector('.question')
+    this.results = html.querySelector('.results')
+    this.resultText = html.querySelector('.result-correct-answer')
+    this.correctResultText = html.querySelector('.result-correct')
+    this.incorrectResult = html.querySelector('.result-incorrect')
+
+    console.log(this.gameBoard, this.scoreCount, this.form,this.input)
+    console.log(this.modal,this.questionText,this.results,this.resultText,this.correctResultText,this.incorrectResult)
 
     }
     gameStart() {
@@ -69,6 +84,8 @@ class Game {
     }
 }
 
+const game = new Game(document.querySelector('.game'),{})
+console.log(game)
 // create game variable and iniate the new class of game 
 
 //////////////BONUS///////////////////////////
