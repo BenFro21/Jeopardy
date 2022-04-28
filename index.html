@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>BenPardy</title>
+</head>
+<body>
+    <div class="game">
+        <header class="header">
+            <h1>Jeopardy Triva</h1>
+            <p class="score">
+                Score <span class="count"></span>
+                <!-- Update score with dom manipulation -->
+            </p>
+        </header>
+        <div class="gameBoard">
+            <!-- fill gameboard with dom manipulation -->
+        </div>
+        <!-- show div below as a pop up -->
+        <div class="modal">
+            <div class="modal-inner">
+                <h2 class="question"></h2>
+                <form autocomplete="off">
+                    <input name="answer" type="text"/>
+                    <button type="submit">answer</button>
+                </form> 
+            </div>
+        </div> 
+    </div>
+
+    
+
+<script src="app.js"></script>
+</body>
+</html>
