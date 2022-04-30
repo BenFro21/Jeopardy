@@ -64,23 +64,37 @@ class Game {
                 let clues = shuffle(catagory.clues).splice(0,5).forEach((clue, index) => {
                     let clueID = categoryIndex + "-" + index;
                     newCat.clues.push(clueID)
-                    newCat.clues[clueID] = {
+                    this.clues[clueID] = {
                         question: clue.question,
                         answer: clue.answer,
                         value: (index +1) * 200
                     }
                 })
                 this.catagory.push(newCat)
-        });          
+        });
+        this.catagory.forEach(c => {
+            this.buildBoard(c)
+        })  
+        console.log(this)        
     }
     updateScore(change){
         this.score += change;
         this.scoreCount.textContent = this.score;
     }
-    buildBoard() {
-        // Create a div split into colums and rows using css 
-
+    buildBoard(category) {
+        // Create a div split into colums and rows using css
         // use data from fetchCatagories to append the div we create 
+        let column = document.createElement('div')
+        column.classList.add('column')
+        column.innerHTML  = (
+           `<header>${category.title}</header><ul></ul>` 
+        )
+        let ul = column.querySelector('ul')
+        category.clues.forEach(clueId => {
+            let clue = this.clues[clueId]
+            ul.innerHTML += `<li><button data-clue-id=${clueId}>${clue.value}</button></li>`
+        })
+        this.gameBoard.appendChild(column)
     }
 
     questionClick(){
