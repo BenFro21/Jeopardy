@@ -40,16 +40,39 @@ class Game {
         // Build a list of questions to plug into the category object 
         // create an id for each clue and add to our clue object 
         // render each catagory to the dom using another method 
-
-        const categories = this.useCategoryIds.map(async category_id => {
-            let catsReturn = await fetch(`https://jservice.io/api/category?id=${category_id}`)
+        let fetchCats = [];
+        this.useCategoryIds.forEach( category_id => {
+             fetch(`https://jservice.io/api/category?id=${category_id}`)
                   .then(response => response.json())
                   .then(data => {
-                      console.log(data)
-                     return data;
+                      fetchCats.push(data)
+                  })
+                  .then(() => {
+                     if(fetchCats.length === 4){
+                        this.updateClues(fetchCats)
+
+                     } 
                   }) 
-        });
-    };    
+                })
+    }    
+    updateClues(categories){
+            categories.forEach((catagory, categoryIndex) => {
+                let newCat = {
+                    title: catagory.title,
+                    clues: []
+                }
+                let clues = shuffle(catagory.clues).splice(0,5).forEach((clue, index) => {
+                    let clueID = categoryIndex + "-" + index;
+                    newCat.clues.push(clueID)
+                    newCat.clues[clueID] = {
+                        question: clue.question,
+                        answer: clue.answer,
+                        value: (index +1) * 200
+                    }
+                })
+                this.catagory.push(newCat)
+        });          
+    }
     updateScore(change){
         this.score += change;
         this.scoreCount.textContent = this.score;
@@ -59,9 +82,7 @@ class Game {
 
         // use data from fetchCatagories to append the div we create 
     }
-    updateScore(){
-        // Update the score if the user answers the question correctly 
-    }
+
     questionClick(){
         // Mark question clicked as used 
 
@@ -103,8 +124,8 @@ game.gameStart()
 
 
 function shuffle(a) {
-    let j, x, i;
-    for(i = a.length -1; i > 0; i--){
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
         j = Math.floor(Math.random() * (i + 1));
         x = a[i];
         a[i] = a[j];
