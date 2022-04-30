@@ -1,46 +1,58 @@
 // use class to make game show 
+// Catigories from the api  
+// Animals - 
+
 class Game {
     constructor(html, options={}){
-    this.categoryIds = []//grab ids from api*/
-    this.catagory = []
-    this.clues = {}
+    this.useCategoryIds = [21, 49, 42, 780];//grab ids from api*/
+    this.catagory = [];
+    this.clues = {};
 
-    this.currentClue = null
-    this.score = 0
+    this.currentClue = null;
+    this.score = 0;
 
-    this.gameBoard = html.querySelector('.gameBoard');
-    this.scoreCount = html.querySelector('.count')
-    this.form = html.querySelector('form')
-    this.input = html.querySelector('input[name=answer]')
-    this.modal = html.querySelector('.modal')
-    this.questionText = html.querySelector('.question')
-    this.results = html.querySelector('.results')
-    this.resultText = html.querySelector('.result-correct-answer')
-    this.correctResultText = html.querySelector('.result-correct')
-    this.incorrectResult = html.querySelector('.result-incorrect')
+    this.gameBoard = html.querySelector('.gameBoard'); // Whole gameboard
+    this.scoreCount = html.querySelector('.count'); // Score counter
+    this.form = html.querySelector('form') //form hiding 
+    this.input = html.querySelector('input[name=answer]'); // input from the user answer 
+    this.modal = html.querySelector('.modal'); //Modal for hiding and showing 
+    this.questionText = html.querySelector('.question'); // question h2 
+    this.resultsDiv = html.querySelector('.results'); // the result div
+    this.resultText = html.querySelector('.result-correct-answer'); // corrct answer p tag 
+    this.correctResultText = html.querySelector('.result-correct'); // modal if you answer correctly 
+    this.incorrectResult = html.querySelector('.result-incorrect'); // modal if you answer incorrectly 
 
-    console.log(this.gameBoard, this.scoreCount, this.form,this.input)
-    console.log(this.modal,this.questionText,this.results,this.resultText,this.correctResultText,this.incorrectResult)
-
+    // console.log(this.gameBoard, this.scoreCount, this.form,this.input);
+    // console.log(this.modal,this.questionText,this.results,this.resultText,this.correctResultText,this.incorrectResult);
+    //     console.log(this)
     }
     gameStart() {
         //Bind event handlers on gameboard/submit button 
         //render inital score to 0 
+        this.updateScore(0);
         // kick of fethcing of the catagories 
+        this.fetchCategories();
     }
-    fetchCatagoies(){
+    fetchCategories(){
         // fetch data from the api with a promise 
-
         // sift through the data and turn into json 
-
         //Build list of catagoies in an object with a question property set to an empty array 
-
         // Build a list of questions to plug into the category object 
-
         // create an id for each clue and add to our clue object 
-
         // render each catagory to the dom using another method 
 
+        const categories = this.useCategoryIds.map(async category_id => {
+            let catsReturn = await fetch(`https://jservice.io/api/category?id=${category_id}`)
+                  .then(response => response.json())
+                  .then(data => {
+                      console.log(data)
+                     return data;
+                  }) 
+        });
+    };    
+    updateScore(change){
+        this.score += change;
+        this.scoreCount.textContent = this.score;
     }
     buildBoard() {
         // Create a div split into colums and rows using css 
@@ -83,11 +95,23 @@ class Game {
 
     }
 }
-
 const game = new Game(document.querySelector('.game'),{})
-console.log(game)
+game.gameStart()
+
+// console.log(game)
 // create game variable and iniate the new class of game 
 
+
+function shuffle(a) {
+    let j, x, i;
+    for(i = a.length -1; i > 0; i--){
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
+}
 //////////////BONUS///////////////////////////
 // create a double jeopardy option 
 // create a start and reset button 
