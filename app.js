@@ -91,11 +91,12 @@ class Game {
         let ul = column.querySelector('ul')
         category.clues.forEach(clueId => {
             let clue = this.clues[clueId]
-            ul.innerHTML += `<li><button data-clue-id=${clueId}>${clue.value}</button></li>`
+            ul.innerHTML += `<li><button dataset-clueId=${clueId}>${clue.value}</button></li>`
         })
         this.gameBoard.appendChild(column)
     }
-
+    
+    
     handleQuestionClick(event) {
         // Mark question clicked as used 
         // clear out the input text 
@@ -103,28 +104,52 @@ class Game {
         //Update the text in the dom 
         // hide the results
         // show the question modal
-      console.log('clicked', event) 
-
+      console.log('clicked', event)
+    //   let clue = "";
+        let clue = this.clues[event.target.attributes[0].textContent];
+         event.target.classList.add('used');
+         this.input.value ="";
+         this.currentClue = clue;
+         this.questionText.textContent = this.currentClue.question;
+         this.resultText.textContent = this.currentClue.answer;
+         this.modal.classList.remove("showing-result");
+         this.modal.classList.add("visible");
+         this.input.focus()
+        console.log(clue)    
     }
-    sumbitHandler(){
-
-        // prevent deafualt 
-
+    sumbitHandler(event){
+        // prevent deafualt
         // create a isCorrect variable 
-
         // if statement on if the input from the user is the same as the questions answer
-
         // When answer is correct show corrct answer p tag 
+        event.preventDefault();
+        let isCorrect = this.input.value === this.currentClue.answer;
+        if(isCorrect){
+            this.updateScore(this.currentClue.value)
+        }
+        this.showAnswer(isCorrect)
     }
     cleanAnswer(){
         // clean up the input a user gives to handle capitlization/ spaces correctly 
     }
-    answer(){
+    showAnswer(isCorrect){
         // show correct or incorrect answer screens 
-
         // add a time out so the answer screen stays for a few seconds before moving on 
+        this.correctResultText.style.display = isCorrect ? "block" : "none";
+        this.incorrectResult.style.display = !isCorrect ? "block" : "none";
+        this.modal.classList.add('showing-result');
+        setTimeout(() => {
+            this.modal.classList.remove('visible');
+        }, 3000);
 
     }
+    // handleFormSub (event){
+    //     event.preventDefault();
+    //     let isCorrect =this.input.value === this.currentClue.answer;
+    //     if(isCorrect){
+    //         this.updateScore(this.currentClue.value)
+    //     }
+    // }
 }
 const game = new Game(document.querySelector('.game'),{})
 game.gameStart()

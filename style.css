@@ -1,3 +1,19 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.score {
+    display: flex;
+    align-items: center;
+}
+.score .count{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+
+
 .gameBoard{
     display: flex;
     justify-content: space-around;
@@ -23,3 +39,38 @@
     cursor: pointer;
     font-weight:bold;
 }
+.gameBoard .column li {
+    background: blue;
+    color: yellow;
+    height: 3em;
+}
+.modal {
+    opacity: 0;
+    pointer-events:none;
+    transition: opacity 0.4s;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: var(--blue);
+    position: fixed;
+    font-size: 2vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .modal.visible {
+    opacity: 1;
+    pointer-events:initial;
+ }
+ .modal.visible{
+     opacity: 1;
+     pointer-events: initial;
+ }
+ .modal.showing-result .result{
+     display: block;
+ }
+ .modal .question  {
+     margin-bottom: 2em;
+ }
