@@ -7,10 +7,8 @@ class Game {
     this.useCategoryIds = [21, 49, 42, 780];//grab ids from api*/
     this.catagory = [];
     this.clues = {};
-
     this.currentClue = null;
     this.score = 0;
-
     this.gameBoard = html.querySelector('.gameBoard'); // Whole gameboard
     this.scoreCount = html.querySelector('.count'); // Score counter
     this.form = html.querySelector('form') //form hiding 
@@ -21,10 +19,6 @@ class Game {
     this.resultText = html.querySelector('.result-correct-answer'); // corrct answer p tag 
     this.correctResultText = html.querySelector('.result-correct'); // modal if you answer correctly 
     this.incorrectResult = html.querySelector('.result-incorrect'); // modal if you answer incorrectly 
-
-    // console.log(this.gameBoard, this.scoreCount, this.form,this.input);
-    // console.log(this.modal,this.questionText,this.results,this.resultText,this.correctResultText,this.incorrectResult);
-    //     console.log(this)
     }
     gameStart() {
         //Bind event handlers on gameboard/submit button 
@@ -32,6 +26,11 @@ class Game {
         this.updateScore(0);
         // kick of fethcing of the catagories 
         this.fetchCategories();
+        this.gameBoard.addEventListener('click', event => {
+            if(event.target){
+                this.handleQuestionClick(event)
+            }
+        })
     }
     fetchCategories(){
         // fetch data from the api with a promise 
@@ -97,18 +96,15 @@ class Game {
         this.gameBoard.appendChild(column)
     }
 
-    questionClick(){
+    handleQuestionClick(event) {
         // Mark question clicked as used 
-
         // clear out the input text 
-
         //update the question with the current question 
-
         //Update the text in the dom 
-
         // hide the results
+        // show the question modal
+      console.log('clicked', event) 
 
-        // show the question modal 
     }
     sumbitHandler(){
 

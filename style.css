@@ -1,0 +1,25 @@
+.gameBoard{
+    display: flex;
+    justify-content: space-around;
+}
+.gameBoard .column{
+    flex: 1;
+
+}
+.column ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.board .column button {
+    height: 100%;
+    color: inherit;
+    font-size: 2em;
+    -webkit-appearance: none;
+    border: 0;
+    background: none;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    font-weight:bold;
+}
