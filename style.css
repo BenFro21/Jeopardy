@@ -1,25 +1,29 @@
 .header{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    background-color: blue;
+    color: white;
 }
 .score {
     display: flex;
     align-items: center;
+    justify-content: end;
+    margin-left: 25%;
 }
 .score .count{
     font-size: 2em;
     font-weight: bold;
+    padding: 2px;
 }
-
-
-
 .gameBoard{
     display: flex;
     justify-content: space-around;
 }
 .gameBoard .column{
     flex: 1;
+    background-color: blue;
+    color:white;
 
 }
 .column ul {
@@ -29,7 +33,6 @@
 }
 .board .column button {
     height: 100%;
-    color: inherit;
     font-size: 2em;
     -webkit-appearance: none;
     border: 0;
@@ -52,7 +55,8 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background: var(--blue);
+    background: blue;
+    color: yellow;
     position: fixed;
     font-size: 2vw;
     text-align: center;
