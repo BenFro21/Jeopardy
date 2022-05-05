@@ -93,8 +93,13 @@ class Game {
          this.currentClue = clue;
          this.questionText.textContent = this.currentClue.question;
          this.resultText.textContent = this.currentClue.answer;
+         this.correctResultText.style.display ="none";
+         this.incorrectResult.style.display = "none";
+         this.resultText.style.display ="none";
          this.modal.classList.remove("showing-result");
          this.modal.classList.add("visible");
+        //  this.modal.style.display = 'none';
+        console.log(this.modal)
          this.input.focus()
         console.log(clue)    
     }

@@ -46,6 +46,7 @@ body{
     font-size: 25px;
     margin-left: 0.1em;
     margin-right: 0.1em;
+    text-transform: capitalize;
 
 }
 .column ul {
@@ -56,19 +57,27 @@ body{
 .board .column button {
     height: 100%;
     font-size: 2em;
-    border: 0;
     background: none;
     display: block;
     width: 100%;
     cursor: pointer;
     font-weight:bold;
 }
+button{
+    height: 100%;
+    width: 100%;
+    color: #FFE817;
+    font-size: 30px;
+    background-color:#0120CB;
+    /* border: none; */
+}
+
 .gameBoard .column li {
     background: linear-gradient(180deg, #2E2E3A 0%, #0C0C2C 100%);
-    color: FFE817;
+    color: #FFE817;
     height: 3em;
 }
-.gameBoard .column .button .used{
+ .used{
     visibility: hidden;
 }  
 .modal {
@@ -79,8 +88,8 @@ body{
     right: 0;
     top: 0;
     bottom: 0;
-    background: blue;
-    color: yellow;
+    background:linear-gradient(180deg, #2E2E3A 0%, #0C0C2C 100%);
+    color: #FFE817;
     position: fixed;
     font-size: 2vw;
     text-align: center;
