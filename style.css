@@ -71,6 +71,11 @@ button{
     background-color:#0120CB;
     /* border: none; */
 }
+.submit{
+    /* background-color:#0120CB; */
+    width: 120px;
+
+}
 
 .gameBoard .column li {
     background: linear-gradient(180deg, #2E2E3A 0%, #0C0C2C 100%);
@@ -88,8 +93,8 @@ button{
     right: 0;
     top: 0;
     bottom: 0;
-    background:linear-gradient(180deg, #2E2E3A 0%, #0C0C2C 100%);
-    color: #FFE817;
+    background:#0120CB;
+    color: white;
     position: fixed;
     font-size: 2vw;
     text-align: center;

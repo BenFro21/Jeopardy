@@ -1,7 +1,7 @@
 
 
 class Game {
-    constructor(html, options={}){
+    constructor(html){
     this.useCategoryIds = [21, 49, 42, 780];
     this.catagory = [];
     this.clues = {};
@@ -66,7 +66,6 @@ class Game {
         this.catagory.forEach(c => {
             this.buildBoard(c)
         })  
-        console.log(this)        
     }
     updateScore(change){
         this.score += change;
@@ -84,9 +83,7 @@ class Game {
         this.gameBoard.appendChild(column)
     }
     handleQuestionClick(event) {
-    event.preventDefault()
-    console.log('clicked', event)
-    //   let clue = "";
+         event.preventDefault()
         let clue = this.clues[event.target.attributes[0].textContent];
          event.target.classList.add('used');
          this.input.value ="";
@@ -98,14 +95,12 @@ class Game {
          this.resultText.style.display ="none";
          this.modal.classList.remove("showing-result");
          this.modal.classList.add("visible");
-        //  this.modal.style.display = 'none';
-        console.log(this.modal)
          this.input.focus()
         console.log(clue)    
     }
     sumbitHandler(event){
         event.preventDefault();
-        let isCorrect = this.input.value === this.currentClue.answer;
+        let isCorrect = this.input.value.toLowerCase() === this.currentClue.answer.toLowerCase();
         if(isCorrect){
             this.updateScore(this.currentClue.value)
         }
@@ -117,12 +112,10 @@ class Game {
         this.modal.classList.add('showing-result');
         setTimeout(() => {
             this.modal.classList.remove('visible');
-        }, 3000);
+        }, 2000);
 
     }
-    cleanAnswer(){
-        // clean up the input a user gives to handle capitlization/ spaces correctly 
-    }
+   
 }
 const game = new Game(document.querySelector('.game'),{})
 game.gameStart()
