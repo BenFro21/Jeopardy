@@ -1,44 +1,36 @@
-// use class to make game show 
-// Catigories from the api  
-// Animals - 
+
 
 class Game {
     constructor(html, options={}){
-    this.useCategoryIds = [21, 49, 42, 780];//grab ids from api*/
+    this.useCategoryIds = [21, 49, 42, 780];
     this.catagory = [];
     this.clues = {};
     this.currentClue = null;
     this.score = 0;
-    this.gameBoard = html.querySelector('.gameBoard'); // Whole gameboard
-    this.scoreCount = html.querySelector('.count'); // Score counter
-    this.form = html.querySelector('form') //form hiding 
-    this.input = html.querySelector('input[name=answer]'); // input from the user answer 
-    this.modal = html.querySelector('.modal'); //Modal for hiding and showing 
-    this.questionText = html.querySelector('.question'); // question h2 
-    this.resultsDiv = html.querySelector('.results'); // the result div
-    this.resultText = html.querySelector('.result-correct-answer'); // corrct answer p tag 
-    this.correctResultText = html.querySelector('.result-correct'); // modal if you answer correctly 
-    this.incorrectResult = html.querySelector('.result-incorrect'); // modal if you answer incorrectly 
+    this.gameBoard = html.querySelector('.gameBoard'); 
+    this.scoreCount = html.querySelector('.count');
+    this.form = html.querySelector('form') 
+    this.input = html.querySelector('input[name=answer]');
+    this.modal = html.querySelector('.modal');
+    this.questionText = html.querySelector('.question'); 
+    this.resultsDiv = html.querySelector('.results'); 
+    this.resultText = html.querySelector('.result-correct-answer');
+    this.correctResultText = html.querySelector('.result-correct'); 
+    this.incorrectResult = html.querySelector('.result-incorrect');
     }
     gameStart() {
-        //Bind event handlers on gameboard/submit button 
-        //render inital score to 0 
         this.updateScore(0);
-        // kick of fethcing of the catagories 
         this.fetchCategories();
         this.gameBoard.addEventListener('click', event => {
             if(event.target){
                 this.handleQuestionClick(event)
             }
         })
+        this.form.addEventListener("submit", e => {
+            this.sumbitHandler(e)
+        })
     }
     fetchCategories(){
-        // fetch data from the api with a promise 
-        // sift through the data and turn into json 
-        //Build list of catagoies in an object with a question property set to an empty array 
-        // Build a list of questions to plug into the category object 
-        // create an id for each clue and add to our clue object 
-        // render each catagory to the dom using another method 
         let fetchCats = [];
         this.useCategoryIds.forEach( category_id => {
              fetch(`https://jservice.io/api/category?id=${category_id}`)
@@ -81,13 +73,9 @@ class Game {
         this.scoreCount.textContent = this.score;
     }
     buildBoard(category) {
-        // Create a div split into colums and rows using css
-        // use data from fetchCatagories to append the div we create 
         let column = document.createElement('div')
         column.classList.add('column')
-        column.innerHTML  = (
-           `<header>${category.title}</header><ul></ul>` 
-        )
+        column.innerHTML  = (`<header>${category.title}</header><ul></ul>`)
         let ul = column.querySelector('ul')
         category.clues.forEach(clueId => {
             let clue = this.clues[clueId]
@@ -95,16 +83,9 @@ class Game {
         })
         this.gameBoard.appendChild(column)
     }
-    
-    
     handleQuestionClick(event) {
-        // Mark question clicked as used 
-        // clear out the input text 
-        //update the question with the current question 
-        //Update the text in the dom 
-        // hide the results
-        // show the question modal
-      console.log('clicked', event)
+    event.preventDefault()
+    console.log('clicked', event)
     //   let clue = "";
         let clue = this.clues[event.target.attributes[0].textContent];
          event.target.classList.add('used');
@@ -118,10 +99,6 @@ class Game {
         console.log(clue)    
     }
     sumbitHandler(event){
-        // prevent deafualt
-        // create a isCorrect variable 
-        // if statement on if the input from the user is the same as the questions answer
-        // When answer is correct show corrct answer p tag 
         event.preventDefault();
         let isCorrect = this.input.value === this.currentClue.answer;
         if(isCorrect){
@@ -129,12 +106,7 @@ class Game {
         }
         this.showAnswer(isCorrect)
     }
-    cleanAnswer(){
-        // clean up the input a user gives to handle capitlization/ spaces correctly 
-    }
     showAnswer(isCorrect){
-        // show correct or incorrect answer screens 
-        // add a time out so the answer screen stays for a few seconds before moving on 
         this.correctResultText.style.display = isCorrect ? "block" : "none";
         this.incorrectResult.style.display = !isCorrect ? "block" : "none";
         this.modal.classList.add('showing-result');
@@ -143,19 +115,12 @@ class Game {
         }, 3000);
 
     }
-    // handleFormSub (event){
-    //     event.preventDefault();
-    //     let isCorrect =this.input.value === this.currentClue.answer;
-    //     if(isCorrect){
-    //         this.updateScore(this.currentClue.value)
-    //     }
-    // }
+    cleanAnswer(){
+        // clean up the input a user gives to handle capitlization/ spaces correctly 
+    }
 }
 const game = new Game(document.querySelector('.game'),{})
 game.gameStart()
-
-// console.log(game)
-// create game variable and iniate the new class of game 
 
 
 function shuffle(a) {

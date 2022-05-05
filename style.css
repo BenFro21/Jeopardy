@@ -1,17 +1,36 @@
+:root{
+    --blue: linear-gradient(180deg, #0120CB 0%, #011BA9 100%);
+}
+*{
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+}
+body{
+    font-family: sans-serif;
+    color: white;
+    font-size: 2vw;
+    text-align: center;
+    padding: 1em;
+    background: linear-gradient(180deg, #2E2E3A 0%, #0C0C2C 100%);
+}
 .header{
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    background-color: blue;
+    background-color: linear-gradient(180deg, #2E2E3A 0%, #0C0C2C 100%);
     color: white;
 }
 .score {
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
     margin-left: 25%;
+    font-size: 2em;
 }
 .score .count{
+    color:#FFE817;
     font-size: 2em;
     font-weight: bold;
     padding: 2px;
@@ -22,8 +41,11 @@
 }
 .gameBoard .column{
     flex: 1;
-    background-color: blue;
+    background-color: linear-gradient(180deg, #2E2E3A 0%, #0C0C2C 100%);
     color:white;
+    font-size: 25px;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
 
 }
 .column ul {
@@ -34,7 +56,6 @@
 .board .column button {
     height: 100%;
     font-size: 2em;
-    -webkit-appearance: none;
     border: 0;
     background: none;
     display: block;
@@ -43,10 +64,13 @@
     font-weight:bold;
 }
 .gameBoard .column li {
-    background: blue;
-    color: yellow;
+    background: linear-gradient(180deg, #2E2E3A 0%, #0C0C2C 100%);
+    color: FFE817;
     height: 3em;
 }
+.gameBoard .column .button .used{
+    visibility: hidden;
+}  
 .modal {
     opacity: 0;
     pointer-events:none;
@@ -67,10 +91,6 @@
  .modal.visible {
     opacity: 1;
     pointer-events:initial;
- }
- .modal.visible{
-     opacity: 1;
-     pointer-events: initial;
  }
  .modal.showing-result .result{
      display: block;
