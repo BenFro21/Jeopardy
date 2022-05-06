@@ -58,7 +58,7 @@
 </details>
 
 ## About The Project
-(https://benfro21.github.io/Jeopardy/
+https://benfro21.github.io/Jeopardy/
 
 # Requirements
 - For your first project, you'll be creating a familiar game using HTML, CSS and JS! You can create your own game or application
@@ -69,20 +69,21 @@
 - Use semantic, valid markup for HTML and CSS (must pass validation without errors)
 - Show a good commit history with frequent commits (minimum of one commit per project day)
 # What I did Well
-- The app will fetch 4 catagories from an api. The clues are then shuffled and added to the DOM. This causes a different experince each time you play.
-- There are a few methods that I will come back to and clean up but over all I feel the code is dry 
-- I am proud that the whole app is in a class rather then a while loop. I should be able to improve it with ease. 
+- The app will fetch 4 catagories from an api. The clues are then shuffled and added to the DOM. This causes a different experience each time you play.
+- There are a few methods that I will come back to and clean up, but overall I feel the code is dry 
+- I am proud that the whole app is in a class rather than a while loop. I should be able to improve it with ease. 
 # Struggles 
 - The api took more time then I expected, but when I got it to work everything seemed to fall in place 
 - The CSS of the modal and gameboard gave me a challenge but I enjoyed working through it 
 # API 
-- the api I used is: [https://jservice.io/]
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Built With
 - **HTML** 
 - **CSS**
 - **JavaScript**
+- The api I used is: https://jservice.io/
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -114,10 +115,10 @@ When you are ready to begin:
 ## Planning
   # MVP User Stories 
   - As a user I want to click on any of the clues in whatever category I like
-  - As a user I would like the gameboard to pre-populate with clues and categories so i can play right away.
+  - As a user I would like the gameboard to pre-populate with clues and categories so I can play right away.
   - As a user I want the clue to take up the size of the gameboard and be clear to read
-  - As a user I want a area to submit my answer to said clue
-  - As a user I want to see if my answer was correct or wrong after submitting my answer
+  - As a user I want an area to submit my answer to said clue
+  - As a user I want to see if my answer was correct or incorrect after submitting my answer
   - As a user I want to see the correct answer if my answer was wrong
   - As a user I want to see my score update as I answer clues
   - As a user I want to reset the game
@@ -126,9 +127,9 @@ When you are ready to begin:
   - As a user I want to play with a friend and base turn order off who answered the last question correctly
   - As a user I want to select my categories to play
   - As a user I want the jeopardy music to play while I answer a question
-  - As a user I want to play a double jeopardy after a Jeopardy round that is harder questions and double the points
-  - AS a user I want a start game button that fills the board with clue value when the game starts. A logo would cover the box until the game starts.
-  - As a user I want a nav bar above the game to choose my catagories, start/restart the game, and choose player 1/2 and enter their names.
+  - As a user I want to play a double jeopardy after a Jeopardy round that provides harder questions and double the points
+  - As a user I want a start game button that fills the board with clue value when the game starts. A logo would cover the box until the game starts.
+  - As a user I want a nav bar above the game to choose my categories, start/restart the game, and choose player 1/2 and enter their names.
   # Schedule
   - 4/30: Psudo code, file creation, HTML setup, basic css to see game,
   - 5/1: JS variable creation
@@ -137,7 +138,8 @@ When you are ready to begin:
   - 5/4-5/6: Styling and Markdown
   # Wire-Frames
   <img src="/images/Project1Wireframe .jpg">
-  <img src="/images/project1-2Wireframe.jpg> 
+  <img src="/images/project1-2Wireframe.jpg"> 
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Contributing
@@ -158,8 +160,8 @@ Don't forget to give the project a star! Thanks again!
 ## Contact
 - Ben Broad 
 - broad0601@gmail.com
-- [https://github.com/BenFro21]
-- [www.linkedin.com/in/ben-broad21]
+- https://github.com/BenFro21
+- www.linkedin.com/in/ben-broad21
 
 Project Link: [https://github.com/BenFro21/Jeopardy](https://github.com/BenFro21/Jeopardy)
 
