@@ -17,35 +17,26 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://benfro21.github.io/Jeopardy/">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Jeopardy Trivia</h3>
 
   <p align="center">
-    project_description
-    <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    Play an in browser version of the hit game show Jeopardy! 
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <br />
+    <a href="https://benfro21.github.io/Jeopardy/">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://benfro21.github.io/Jeopardy/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://benfro21.github.io/Jeopardy/issues">Request Feature</a>
   </p>
 </div>
 
@@ -67,7 +58,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#planning">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -80,31 +71,28 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![game_title.PNG]](https://benfro21.github.io/Jeopardy/)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email`, `email_client`, `project_title`, `project_description`
+Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `BenFro21`, `Jeopardy`, `twitter_handle`, `linkedin_username`, `email`, `email_client`, `project_title`, `project_description`
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 ### Built With
-
+- **HTML** 
+- **CSS**
+- **JavaScript**
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-
-
-
-
+Test your might against some of Jeapardys best questions. Click on the link below to start playing. 
+When you are ready to begin: 
+- Click on a clue, 
+- Type your answer in the space provided,
+- Click answer. 
+- The clue will be removed from the game after you answer. Your score will adjust acordingly 
+- Refresh the browser to play again with a randomized new game
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -112,24 +100,21 @@ To get a local copy up and running follow these simple example steps.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+- Play the Game: [(https://github.com/BenFro21/Jeopardy/]
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
 <!-- ROADMAP -->
-## Roadmap
+## Planning
 
 - [] Feature 1
 - [] Feature 2
 - [] Feature 3
     - [] Nested Feature
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/BenFro21/Jeopardy/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -164,10 +149,12 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <!-- CONTACT -->
 ## Contact
+- Ben Broad 
+- broad0601@gmail.com
+- [https://github.com/BenFro21]
+- [www.linkedin.com/in/ben-broad21]
 
-Your Name -
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/BenFro21/Jeopardy](https://github.com/BenFro21/Jeopardy)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -186,16 +173,16 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/BenFro21/Jeopardy.svg?style=for-the-badge
+[contributors-url]: https://github.com/BenFro21/Jeopardy/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/BenFro21/Jeopardy.svg?style=for-the-badge
+[forks-url]: https://github.com/BenFro21/Jeopardy/network/members
+[stars-shield]: https://img.shields.io/github/stars/BenFro21/Jeopardy.svg?style=for-the-badge
+[stars-url]: https://github.com/BenFro21/Jeopardy/stargazers
+[issues-shield]: https://img.shields.io/github/issues/BenFro21/Jeopardy.svg?style=for-the-badge
+[issues-url]: https://github.com/BenFro21/Jeopardy/issues
+[license-shield]: https://img.shields.io/github/license/BenFro21/Jeopardy.svg?style=for-the-badge
+[license-url]: https://github.com/BenFro21/Jeopardy/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/screenshot.png
