@@ -1,5 +1,4 @@
 
-
 class Game {
     constructor(html){
     this.useCategoryIds = [21, 49, 42, 780];
@@ -41,7 +40,6 @@ class Game {
                   .then(() => {
                      if(fetchCats.length === 4){
                         this.updateClues(fetchCats)
-
                      } 
                   }) 
                 })
@@ -83,7 +81,7 @@ class Game {
         this.gameBoard.appendChild(column)
     }
     handleQuestionClick(event) {
-         event.preventDefault()
+        event.preventDefault()
         let clue = this.clues[event.target.attributes[0].textContent];
          event.target.classList.add('used');
          this.input.value ="";
@@ -96,7 +94,6 @@ class Game {
          this.modal.classList.remove("showing-result");
          this.modal.classList.add("visible");
          this.input.focus()
-        console.log(clue)    
     }
     sumbitHandler(event){
         event.preventDefault();
@@ -113,10 +110,9 @@ class Game {
         setTimeout(() => {
             this.modal.classList.remove('visible');
         }, 2000);
-
     }
-   
 }
+
 const game = new Game(document.querySelector('.game'),{})
 game.gameStart()
 
@@ -131,7 +127,3 @@ function shuffle(a) {
     }
     return a;
 }
-//////////////BONUS///////////////////////////
-// create a double jeopardy option 
-// create a start and reset button 
-// create a second player option 
