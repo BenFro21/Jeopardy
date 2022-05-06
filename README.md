@@ -75,7 +75,7 @@ https://benfro21.github.io/Jeopardy/
 # Struggles 
 - The api took more time then I expected, but when I got it to work everything seemed to fall in place 
 - The CSS of the modal and gameboard gave me a challenge but I enjoyed working through it 
-# API 
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -102,7 +102,7 @@ When you are ready to begin:
 
 
 ## Play the game! 
-- Play the Game: https://github.com/BenFro21/Jeopardy/
+- Play the Game: https://benfro21.github.io/Jeopardy/
 # Screen Shots 
   <img src="/images/Game_screen.PNG">
   <img src="/images/modal.PNG">
@@ -163,7 +163,7 @@ Don't forget to give the project a star! Thanks again!
 - https://github.com/BenFro21
 - www.linkedin.com/in/ben-broad21
 
-Project Link: [https://github.com/BenFro21/Jeopardy](https://github.com/BenFro21/Jeopardy)
+Project Link: https://benfro21.github.io/Jeopardy/
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
