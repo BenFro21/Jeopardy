@@ -22,7 +22,7 @@
 <br />
 <div align="center">
   <a href="https://benfro21.github.io/Jeopardy/">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="/images/game_title.PNG" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Jeopardy Trivia</h3>
@@ -33,16 +33,9 @@
     <br />
     <br />
     <a href="https://benfro21.github.io/Jeopardy/">View Demo</a>
-    ·
-    <a href="https://benfro21.github.io/Jeopardy/issues">Report Bug</a>
-    ·
-    <a href="https://benfro21.github.io/Jeopardy/issues">Request Feature</a>
   </p>
 </div>
 
-
-
-<!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -57,24 +50,33 @@
       <ul>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#play-the-game">Usage</a></li>
     <li><a href="#planning">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
-
-
-<!-- ABOUT THE PROJECT -->
 ## About The Project
+(https://benfro21.github.io/Jeopardy/
 
-[![game_title.PNG]](https://benfro21.github.io/Jeopardy/)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `BenFro21`, `Jeopardy`, `twitter_handle`, `linkedin_username`, `email`, `email_client`, `project_title`, `project_description`
-
+# Requirements
+- For your first project, you'll be creating a familiar game using HTML, CSS and JS! You can create your own game or application
+- Render in the browser
+- Include separate HTML / CSS / JavaScript files
+- Use Javascript for DOM manipulation
+- Be deployed online using [Github Project pages](https://pages.github.com).
+- Use semantic, valid markup for HTML and CSS (must pass validation without errors)
+- Show a good commit history with frequent commits (minimum of one commit per project day)
+# What I did Well
+- The app will fetch 4 catagories from an api. The clues are then shuffled and added to the DOM. This causes a different experince each time you play.
+- There are a few methods that I will come back to and clean up but over all I feel the code is dry 
+- I am proud that the whole app is in a class rather then a while loop. I should be able to improve it with ease. 
+# Struggles 
+- The api took more time then I expected, but when I got it to work everything seemed to fall in place 
+- The CSS of the modal and gameboard gave me a challenge but I enjoyed working through it 
+# API 
+- the api I used is: [https://jservice.io/]
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Built With
@@ -98,29 +100,46 @@ When you are ready to begin:
 
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
-- Play the Game: [(https://github.com/BenFro21/Jeopardy/]
+## Play the game! 
+- Play the Game: https://github.com/BenFro21/Jeopardy/
+# Screen Shots 
+  <img src="/images/Game_screen.PNG">
+  <img src="/images/modal.PNG">
+  <img src="/images/score counter.PNG">
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
-<!-- ROADMAP -->
 ## Planning
-
-- [] Feature 1
-- [] Feature 2
-- [] Feature 3
-    - [] Nested Feature
-
-See the [open issues](https://github.com/BenFro21/Jeopardy/issues) for a full list of proposed features (and known issues).
-
+  # MVP User Stories 
+  - As a user I want to click on any of the clues in whatever category I like
+  - As a user I would like the gameboard to pre-populate with clues and categories so i can play right away.
+  - As a user I want the clue to take up the size of the gameboard and be clear to read
+  - As a user I want a area to submit my answer to said clue
+  - As a user I want to see if my answer was correct or wrong after submitting my answer
+  - As a user I want to see the correct answer if my answer was wrong
+  - As a user I want to see my score update as I answer clues
+  - As a user I want to reset the game
+  # Stretch Goals 
+  - As a user I want different categories and clues each time I reset the game
+  - As a user I want to play with a friend and base turn order off who answered the last question correctly
+  - As a user I want to select my categories to play
+  - As a user I want the jeopardy music to play while I answer a question
+  - As a user I want to play a double jeopardy after a Jeopardy round that is harder questions and double the points
+  - AS a user I want a start game button that fills the board with clue value when the game starts. A logo would cover the box until the game starts.
+  - As a user I want a nav bar above the game to choose my catagories, start/restart the game, and choose player 1/2 and enter their names.
+  # Schedule
+  - 4/30: Psudo code, file creation, HTML setup, basic css to see game,
+  - 5/1: JS variable creation
+  - 5/2: JS logic
+  - 5/3: Have MVP finished
+  - 5/4-5/6: Styling and Markdown
+  # Wire-Frames
+  <img src="/images/Project1Wireframe .jpg">
+  <img src="/images/project1-2Wireframe.jpg> 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<!-- CONTRIBUTING -->
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -136,18 +155,6 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- CONTACT -->
 ## Contact
 - Ben Broad 
 - broad0601@gmail.com
@@ -158,16 +165,6 @@ Project Link: [https://github.com/BenFro21/Jeopardy](https://github.com/BenFro21
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
