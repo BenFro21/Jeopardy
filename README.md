@@ -122,7 +122,7 @@ When you are ready to begin:
   - As a user I want to see the correct answer if my answer was wrong
   - As a user I want to see my score update as I answer clues
   - As a user I want to reset the game
-  # Stretch Goals 
+  # Stretch Goals & Future Enhancments 
   - As a user I want different categories and clues each time I reset the game
   - As a user I want to play with a friend and base turn order off who answered the last question correctly
   - As a user I want to select my categories to play
@@ -130,6 +130,7 @@ When you are ready to begin:
   - As a user I want to play a double jeopardy after a Jeopardy round that provides harder questions and double the points
   - As a user I want a start game button that fills the board with clue value when the game starts. A logo would cover the box until the game starts.
   - As a user I want a nav bar above the game to choose my categories, start/restart the game, and choose player 1/2 and enter their names.
+  
   # Schedule
   - 4/30: Psudo code, file creation, HTML setup, basic css to see game,
   - 5/1: JS variable creation

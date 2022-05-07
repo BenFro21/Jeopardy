@@ -94,6 +94,8 @@ class Game {
          this.modal.classList.remove("showing-result");
          this.modal.classList.add("visible");
          this.input.focus()
+        console.log(clue.answer)
+
     }
     sumbitHandler(event){
         event.preventDefault();
